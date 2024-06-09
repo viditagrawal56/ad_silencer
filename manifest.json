@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Hotstar Ad Muter",
+  "version": "1.0",
+  "permissions": ["scripting", "tabs", "activeTab", "webNavigation", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "index.html"
+  }
+}
