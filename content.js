@@ -9,7 +9,7 @@
 
   function isAdPlaying() {
     const adElements = document.querySelectorAll(
-      ".ad-class, .ad-container, .ad-banner"
+      ".ytp-ad-player-overlay-layout, .ytp-ad-player-overlay-layout__player-card-container"
     );
     if (adElements.length > 0) {
       return true;

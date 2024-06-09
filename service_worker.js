@@ -16,5 +16,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     });
   } else if (message.action === "stopMonitoring") {
     chrome.tabs.reload(tabId);
+    chrome.tabs.update(tabId, { muted: false });
   }
 });
